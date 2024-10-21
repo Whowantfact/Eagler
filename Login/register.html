@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorSync | Register</title>
+    <link rel="shortcut icon" href="photos/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        .text {
+            color: white;
+            z-index: -1;
+            font-size: 48px; /* Added 'px' to font-size */
+        }
+    </style>
+</head>
+<body>
+    <div class="logingnav">
+        <div id="nav">
+            <a href="/">Login</a>
+            <a href="about.html">About</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="title">
+           Register
+        </div>
+        <!-- Adjusted form action to point to registered.html -->
+        <form id="loginForm" action="registered.html" method="get">
+           <div class="field">
+              <input type="text" id="usernameinpt" required>
+              <label for="usernameinpt">Username</label> <!-- Added 'for' attribute to label -->
+           </div>
+           <div class="field">
+              <input type="password" id="passwordinpt" required>
+              <label for="passwordinpt">Password</label> <!-- Added 'for' attribute to label -->
+           </div>
+           <div class="content">
+           </div>
+           <div class="field">
+                <input type="submit" value="Register" id="submitbtn">
+           </div>
+        </form>
+    </div>
+
+    <div class="footer-menu" id="footerMenu">
+        <div class="menu-section">
+            <h3>LEARN</h3>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">In Print</a></li>
+                <li><a href="#">Word of the Year 2023</a></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h3>DEVELOP</h3>
+            <ul>
+                <li><a href="#">Dictionary API</a></li>
+                <li><a href="#">Search Widgets</a></li>
+                <li><a href="#">License Data</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Comment about dingus -->
+</body>
+</html>

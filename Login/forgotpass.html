@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="logingnav">
+        <div id="nav">
+            <a href="/index.html">Login</a>
+            <a href="about.html">About</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="title">
+            Forgot Password
+        </div>
+        <form>
+            <div class="field">
+                <input type="email" id="emailInput" required>
+                <label for="emailInput">Email</label>
+            </div>
+            <div class="field">
+                <input type="submit" value="Submit">
+            </div>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <div class="footer-menu" id="footerMenu">
+        <div class="menu-section">
+            <h3>LEARN</h3>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">In Print</a></li>
+                <li><a href="#">Word of the Year 2023</a></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h3>DEVELOP</h3>
+            <ul>
+                <li><a href="#">Dictionary API</a></li>
+                <li><a href="#">Search Widgets</a></li>
+                <li><a href="#">License Data</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            document.getElementById('message').textContent = "Email not found."; // Display the message
+        });
+    </script>
+</body>
+</html>

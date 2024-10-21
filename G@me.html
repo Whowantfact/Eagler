@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Blanket G@me hub" />
+  <title id="title">Blanket</title>
+  <link rel="shortcut icon" href="./assets/image/blanket.png" type="image/png">
+  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <link rel="stylesheet" id="themecss" href="themes.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="index.html">Login Page</a>
+    <a href="#">Games</a>
+    <a class="ebutton" onclick="e()"><span class="material-symbols-outlined"> code </a>
+      <div class="card" style="position: fixed">
+        <div class="searchbar" style="
+  position: fixed;
+  top: 4px;
+  right: 5px;
+  border: 3px solid #73AD21;
+            ">
+          <div class="searchbar-wrapper">
+            <div class="searchbar-left">
+              <div class="search-icon-wrapper">
+                <span class="search-icon searchbar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <form id="uv-form" class="searchbar-center" onsubmit="return validateSearch()">
+              <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+              <div class="searchbar-input-spacer"></div>
+              <input id="uv-address" type="search" class="searchbar-input" maxlength="2048" autocapitalize="off" autocomplete="on" title="Search" role="searchbox" placeholder="Search under the blanket" aria-label="Search under the blanket"/>
+          </form>
+          </div>
+        </div>
+      </div>
+
+</div>
+  <h1 style="color: var(--title-color); margin-top: 5%;font-size: 60px;">Blanket</h1> 
+  <h2><span style="color: var(--title-color);" id="subtitle">...</span></h2>
+      <div class="card" style="position: fixed">
+      </div>
+</html>
+<div class="center">
+    <div class="game-icons">
+        <div class="game-icon" onclick="window.location.href='game/'">
+            <button>
+                <img src="img/mspacman.jpeg" alt="mspacman">
+            </button>
+            <p>MS Pacman</p>
+        </div>
+    </div>
+</div>
+    <script src="shit.js"></script>
+    <script>
+      //Eruda :O
+      //insert nobodycares skidding quote here 
+      function e() {
+        eruda.init();
+      }
+    </script>
