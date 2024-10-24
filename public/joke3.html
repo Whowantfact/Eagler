@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorSync | Login</title>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script src="Login/index.js" defer></script>
+    <script src="login.js" defer></script> <!-- Include the separate JavaScript file -->
+    <style>
+        /* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #ffffff;
+    background: linear-gradient(-135deg, #b97bef, #8787ca, #665cff );
+}
+
+::selection {
+    background: #4158d0;
+    color: #fff;
+}
+
+/* Login Navigation styles */
+.logingnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-135deg, #4943aa , #ce7cff);
+    padding: 20px;
+    z-index: 2;
+}
+
+#nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding-left: 10px;
+}
+
+.logingnav a {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+/* Login Form styles */
+.wrapper {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(255, 68, 68, 0.1);
+    position: absolute;
+    top: 42%; /* Adjust the top value to move the login form higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #ffffff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #8450a4, #474ade);
+}
+
+.wrapper form {
+    padding: 10px 30px 50px 30px;
+}
+
+.wrapper form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.wrapper form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid linear-gradient(-135deg, #4943aa , #ce7cff);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+.wrapper form .field input:valid {
+    border-color: #cd7cfe;
+}
+
+.wrapper form .field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #bfbbbb;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus ~ label,
+.wrapper form .field input:valid ~ label {
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
+}
+
+.wrapper form .content {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper form .content .checkbox input {
+    width: 0px;
+    height: 0px;
+    background: red;
+}
+
+.wrapper form .content label {
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+}
+
+.wrapper form .field input[type="submit"] {
+    color: #fff;
+    border: none;
+    padding: 1px 1px;
+    margin-top: 0%;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #8450a4, #474ade);
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+.wrapper form .signup-link {
+    color: #262626;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wrapper form .pass-link a,
+.wrapper form .signup-link a {
+    color: #4158d0;
+    text-decoration: none;
+}
+
+.wrapper form .pass-link a:hover,
+.wrapper form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Menu styles */
+.footer-menu {
+    width: 100%; /* Change width to 100% */
+    background: linear-gradient(-135deg, #4943aa , #ce7cff);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    bottom: 0;
+    position: fixed;
+}
+
+.menu-section h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-section ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 2;
+    display: block;
+}
+
+.menu-section ul li a:hover {
+    color: #1a76ff;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 100px;
+    color: #ffffff;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #210c64, #9faffd);
+    padding: 20px;
+    user-select: none;
+    border-radius: 10px;
+}
+
+#content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content h2 {
+    color: #210c64;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#content p {
+    color: #262626;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* Bottom Nav */
+.nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    width: 88%;
+    background: linear-gradient(135deg, #665cff , #b97bef);
+    margin-inline: auto;
+    box-shadow: 0 2px 16px #f9faff1e;
+    padding: 1rem 1.75rem;
+    border-radius: 4rem;
+    z-index: var(--z-fixed);
+  }
+  
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__link {
+    color: #9274f3;
+    font-size: 1.5rem;
+    transition: color .4s;
+  }
+  
+  .nav__link:hover {
+    color: #474ade;
+  }
+  nav:hover {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    .nav__link{opacity: 1;}
+}
+nav {opacity: .3;
+    transition: opacity 300ms ease-in-out;
+    .nav__link{opacity: 1;} 
+}
+
+
+        .pxe {
+            text-align: center;
+            border: 1px solid #193254;
+            padding: 20px;
+            position: static;
+            top: 50%; /* Changed from 37% to 50% */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .footer-menu {
+            background-color: #193254;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer-menu h3 {
+            color: rgb(255, 255, 255);
+        }
+
+        .footer-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+    </style>
+</head>
+------------------------------------------------------------------------------------------
+
+<img src="IMG_20241022_174843.jpg" alt="fruit loops/skittles race" width="230" height="169"style="position:absolute; left:50%;bottom:50%;">
+
+
+
+
+
+<a href="eagler15.html">
+    <button>Eagler 1.5.2</button>
+</a>
+
+<div class="game-icon" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://eaglercraft.com/mc/1.8.8/');">
+    <button>
+        <img src="img/osu.png" alt="osu">
+    </button>
+    <p>Osu</p>
+</div>
+<script src="/@/bundle.js"></script>
+  <script src="/@/config.js"></script>
+  </head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MD9M0FTDH0');
+</script>
+<div class="logingnav">
+    <div id="nav">
+        <a style="padding: 0px 0px 10px;" href="/">Login</a></button>
+        <a href="Login/about.html">About</a></button>
+        <a href="Login/newsletter.html">Newsletter</a></button>
+        <a href="Login/register.html">Register</a></button>
+    </div>
+</div>
+<body>
+   
+    
+
+    <nav class="nav">
+        <ul class="nav__list" style="--textcolor:rgb(187, 230, 244);">
+            <i>
+        
+            <a href="#" class="nav__link" style="color: var(--textcolor);">
+                Privacy Policy
+            </a>
+        </i>
+            <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Terms of Service
+                </a>
+            </i>
+            <i>
+                <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                    Feedback
+              </a>
+            </i>
+              <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Our Mission
+               </a>
+            <i>
+        </ul>
+     </nav>
+</body>
+
+</html>
