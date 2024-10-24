@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorSync | Register</title>
+    <link rel="shortcut icon" href="photos/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        .text {
+            color: white;
+            z-index: -1;
+            font-size: 48px; /* Added 'px' to font-size */
+        }
+    </style>
+</head>
+<body>
+    <div class="logingnav">
+        <div id="nav">
+            <a href="/">Login</a>
+            <a href="about.html">About</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="title">
+           Register
+        </div>
+        <!-- Adjusted form action to point to registered.html -->
+        <form id="loginForm" action="registered.html" method="get">
+           <div class="field">
+              <input type="text" id="usernameinpt" required>
+              <label for="usernameinpt">Username</label> <!-- Added 'for' attribute to label -->
+           </div>
+           <div class="field">
+              <input type="password" id="passwordinpt" required>
+              <label for="passwordinpt">Password</label> <!-- Added 'for' attribute to label -->
+           </div>
+           <div class="content">
+           </div>
+           <div class="field">
+                <input type="submit" value="Register" id="submitbtn">
+           </div>
+        </form>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav__list" style="--textcolor:rgb(187, 230, 244);">
+            <i>
+        
+            <a href="#" class="nav__link" style="color: var(--textcolor);">
+                Privacy Policy
+            </a>
+        </i>
+            <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Terms of Service
+                </a>
+            </i>
+            <i>
+                <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                    Feedback
+              </a>
+            </i>
+              <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Our Mission
+               </a>
+            <i>
+        </ul>
+     </nav>
+    <!-- Comment about dingus -->
+</body>
+</html>

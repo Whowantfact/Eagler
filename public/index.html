@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorSync | Login</title>
+    <link rel="stylesheet" type="text/css" href="Login/style.css"/>
+    <script src="Login/index.js" defer></script>
+    <script src="login.js" defer></script> <!-- Include the separate JavaScript file -->
+    <style>
+        .pxe {
+            text-align: center;
+            border: 1px solid #193254;
+            padding: 20px;
+            position: static;
+            top: 50%; /* Changed from 37% to 50% */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .footer-menu {
+            background-color: #193254;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer-menu h3 {
+            color: rgb(255, 255, 255);
+        }
+
+        .footer-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MD9M0FTDH0');
+</script>
+<div class="logingnav">
+    <div id="nav">
+        <a style="padding: 0px 0px 10px;" href="/">Login</a></button>
+        <a href="Login/about.html">About</a></button>
+        <a href="Login/newsletter.html">Newsletter</a></button>
+        <a href="Login/register.html">Register</a></button>
+    </div>
+</div>
+<body>
+    <div class="wrapper">
+        <div class="title">
+           Login
+        </div>
+        <form id="loginForm" action="#">
+           <div class="field">
+              <input type="text" id="usernameinpt" id="usernameinpt1" required>
+              <label>Username</label>
+           </div>
+           <div class="field">
+              <input type="password" id="passwordinpt" id="passwordinpt1"required>
+              <label>Password</label>
+           </div>
+           <div class="content">
+              <div class="checkbox">
+                 <input type="checkbox" id="remember-me">
+                 <label for="remember-me">Remember me</label>
+              </div>
+              <div class="pass-link">
+                 <a href="Login/forgotpass.html">Forgot password?</a>
+              </div>
+           </div>
+           <div class="field">
+              <input type="submit" value="Login" id="submitbtn">
+           </div>
+           <div class="signup-link">
+              Not a member? <a href="Login/register.html">Signup now</a>
+           </div>
+        </form>
+    </div>
+    
+    <nav class="nav">
+        <ul class="nav__list" style="--textcolor:rgb(187, 230, 244);">
+            <i>
+        
+            <a href="#" class="nav__link" style="color: var(--textcolor);">
+                Privacy Policy
+            </a>
+        </i>
+            <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Terms of Service
+                </a>
+            </i>
+            <i>
+                <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                    Feedback
+              </a>
+            </i>
+              <i>
+              <a href="#projects" class="nav__link" style="color: var(--textcolor);">
+                  Our Mission
+               </a>
+            <i>
+        </ul>
+     </nav>
+</body>
+
+</html>
